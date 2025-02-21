@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import RegistrationForm from "@/components/RegistrationForm";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -36,7 +37,9 @@ const Index = () => {
           <p className="text-lg mb-8">
             We bring together organizations and individuals to create lasting positive change through innovative programmes and strategic partnerships.
           </p>
-          <Link to="/about" className="inline-flex items-center text-primary hover:underline">
+          <Link to="/about" className="inline-flex items
+
+-center text-primary hover:underline">
             Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
@@ -73,8 +76,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Registration Section */}
+      <section id="register" className="section-padding bg-secondary/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Register Now</h2>
+          <p className="text-lg mb-8">
+            Take the first step towards your future by registering for one of our programmes.
+          </p>
+          <RegistrationForm />
+        </div>
+      </section>
+
       {/* Newsletter Section */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
           <p className="text-lg mb-8">
