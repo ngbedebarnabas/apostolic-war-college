@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import RegistrationForm from "@/components/RegistrationForm";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Users, Target, Award } from "lucide-react";
 
 const Index = () => {
   return (
@@ -43,9 +43,23 @@ const Index = () => {
           <p className="text-lg mb-8">
             We bring together organizations and individuals to create lasting positive change through innovative programmes and strategic partnerships.
           </p>
-          <Link to="/about" className="inline-flex items-center text-primary hover:underline">
-            Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div className="flex flex-col items-center">
+              <Users className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+              <p className="text-sm text-muted-foreground">Led by industry professionals</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Target className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Focused Approach</h3>
+              <p className="text-sm text-muted-foreground">Tailored to your needs</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Award className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
+              <p className="text-sm text-muted-foreground">Measurable impact</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -97,6 +111,30 @@ const Index = () => {
                   <Link to="/events" className="text-primary hover:underline">Learn more</Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics */}
+      <section className="section-padding bg-primary text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <h3 className="text-4xl font-bold mb-2">1000+</h3>
+              <p>Students Enrolled</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold mb-2">50+</h3>
+              <p>Partner Organizations</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold mb-2">25+</h3>
+              <p>Countries Reached</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold mb-2">100+</h3>
+              <p>Success Stories</p>
             </div>
           </div>
         </div>
@@ -154,6 +192,8 @@ const Index = () => {
           <NewsletterSignup />
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
