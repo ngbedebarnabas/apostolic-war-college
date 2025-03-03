@@ -56,41 +56,22 @@ const About = () => {
       {/* Values */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Excellence</h3>
-              <p>Striving for the highest standards in education and service.</p>
-              <Award className="h-8 w-8 text-primary mt-4" />
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Innovation</h3>
-              <p>Embracing new ideas and approaches to learning.</p>
-              <Award className="h-8 w-8 text-primary mt-4" />
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Community</h3>
-              <p>Building strong relationships and fostering collaboration.</p>
-              <Award className="h-8 w-8 text-primary mt-4" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="section-padding">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Our Team</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="glass p-8 rounded-lg">
-              <Users className="h-16 w-16 mx-auto text-primary mb-6" />
-              <p className="text-lg mb-6">
-                Our dedicated team of professionals brings together diverse expertise and experience to deliver exceptional educational programmes and foster meaningful partnerships.
-              </p>
-              <p className="text-muted-foreground">
-                Join our team of passionate educators, innovators, and change-makers.
-              </p>
-            </div>
+          <h2 className="text-3xl font-bold text-center mb-8">About Adullam & AWC</h2>
+          <div className="glass p-8 rounded-lg">
+            <p className="mb-6 text-lg">
+              RCN Theological Seminary – Adullam exists to equip Christ-like leaders through sound biblical doctrine and theology, to bear accurate witness unto Jesus both within the Church and in the marketplace. Adullam cultivates rigorous minds, passionate hearts, and Christ-centred lifestyle to prepare servant leaders for transformational ministry in a broken and complex world in collaboration with the Church.
+            </p>
+            <p className="mb-6 text-lg">
+              As part of our specialized training modules, we introduce the Apostolic War College (AWC)—a strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement across every sphere of society. AWC serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
+            </p>
+            <h3 className="text-2xl font-bold mb-4">Intended Audience</h3>
+            <p className="mb-4 text-lg">This training is specifically designed for:</p>
+            <ul className="list-disc pl-6 space-y-2 mb-6 text-lg">
+              <li>Christian leaders, ministers, and pastors</li>
+              <li>Intercessors and prophetic voices</li>
+              <li>Kingdom professionals seeking to influence their spheres spiritually and physically</li>
+              <li>Believers desiring deeper spiritual encounters and warfare training</li>
+            </ul>
           </div>
         </div>
       </section>

@@ -20,10 +20,10 @@ const Index = () => {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">
-            Empowering Through Partnership
+            The Apostolic War College (AWC)
           </h1>
           <p className="text-lg md:text-xl mb-8 animate-fadeIn">
-            Join us in creating meaningful impact through innovative programmes and strategic partnerships.
+            A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn">
             <Button asChild size="lg">

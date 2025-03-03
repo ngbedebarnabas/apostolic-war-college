@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -24,65 +25,32 @@ const Programmes = () => {
         </div>
       </section>
 
-      {/* Programme Categories */}
+      {/* Programme Details */}
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 gap-12">
-            {/* Education Initiative */}
+            {/* Module 1 */}
             <div className="glass p-8 rounded-lg">
-              <h2 className="text-2xl font-bold mb-4">Education Initiative</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <p className="mb-4">
-                    Our flagship education programme focuses on providing quality education through innovative teaching methods and comprehensive curriculum.
-                  </p>
-                  <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li>Duration: 12 months</li>
-                    <li>Mode: Hybrid (Online & In-person)</li>
-                    <li>Certification provided</li>
-                  </ul>
-                  <Button asChild>
-                    <Link to="/#register">Apply Now</Link>
-                  </Button>
-                </div>
-                <div className="bg-secondary/30 p-6 rounded-lg">
-                  <h3 className="font-semibold mb-2">What you'll learn:</h3>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Advanced Teaching Methods</li>
-                    <li>Curriculum Development</li>
-                    <li>Student Assessment</li>
-                    <li>Educational Technology</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Innovation Hub */}
-            <div className="glass p-8 rounded-lg">
-              <h2 className="text-2xl font-bold mb-4">Innovation Hub</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <p className="mb-4">
-                    A space for creativity and technological advancement, fostering innovation and entrepreneurship.
-                  </p>
-                  <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li>Duration: 6 months</li>
-                    <li>Mode: In-person</li>
-                    <li>Project-based learning</li>
-                  </ul>
-                  <Button asChild>
-                    <Link to="/#register">Apply Now</Link>
-                  </Button>
-                </div>
-                <div className="bg-secondary/30 p-6 rounded-lg">
-                  <h3 className="font-semibold mb-2">Programme Features:</h3>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Mentorship</li>
-                    <li>Networking Events</li>
-                    <li>Resources & Support</li>
-                    <li>Pitch Opportunities</li>
-                  </ul>
-                </div>
+              <h2 className="text-2xl font-bold mb-4">Apostolic War College – Module 1</h2>
+              <p className="mb-6 text-lg">
+                Module 1 is designed as an introduction to supernatural realities essential for believers engaged in spiritual warfare and kingdom advancement. This module is structured to build a robust understanding of the supernatural dimension in which believers operate and how it can be applied in our world today in family life, ministry, and the marketplace.
+              </p>
+              
+              <h3 className="text-xl font-bold mb-4">Objectives</h3>
+              <p className="mb-4">By the end of this training, participants will:</p>
+              <ol className="list-decimal pl-6 space-y-2 mb-6">
+                <li>Understand the apostolic mandate and its role in the End-time agenda.</li>
+                <li>Gain insight into the fundamentals of the supernatural and how to walk in them.</li>
+                <li>Grasp the kingdom fundamentals necessary for advancing God's dominion in various spheres (Supernatural and Physical).</li>
+                <li>Develop an awareness of spiritual communications and how to perceive, discern, understand, interpret, and apply divine instructions.</li>
+                <li>Experience practical engagement in intensive prayer, spiritual exercises, and their implication to our contemporary world.</li>
+                <li>Be equipped for effective spiritual warfare strategies and kingdom governance.</li>
+              </ol>
+              
+              <div className="mt-6">
+                <Button asChild>
+                  <Link to="/#register">Apply Now</Link>
+                </Button>
               </div>
             </div>
           </div>
