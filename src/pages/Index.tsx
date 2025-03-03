@@ -172,8 +172,8 @@ const Index = () => {
       </section>
 
       {/* Registration Section */}
-      <section id="register" className="section-padding">
-        <div className="max-w-4xl mx-auto text-center">
+      <section id="register" className="section-padding bg-secondary/30">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Register Now</h2>
           <p className="text-lg mb-8">
             Take the first step towards your future by registering for one of our programmes.
@@ -183,7 +183,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
           <p className="text-lg mb-8">
