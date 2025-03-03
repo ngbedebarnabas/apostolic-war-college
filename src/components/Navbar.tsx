@@ -13,7 +13,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-semibold">
-            Logo
+            <img 
+              src="/lovable-uploads/86a1b68d-e975-4e1d-a5e2-8ed52da63bd1.png" 
+              alt="Apostolic War College" 
+              className="h-14" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

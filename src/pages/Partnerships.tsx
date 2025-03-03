@@ -1,27 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
-import { ArrowRight, Check, CreditCard } from "lucide-react";
-import { useState } from "react";
+
 import Footer from "@/components/Footer";
 
 const Partnerships = () => {
-  const { toast } = useToast();
-  const [paymentDetails, setPaymentDetails] = useState({
-    cardNumber: "",
-    expiryDate: "",
-    cvv: "",
-    name: "",
-  });
-
-  const handlePayment = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Processing Payment",
-      description: "Please connect to Supabase to enable secure payment processing.",
-    });
-  };
-
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section with new background */}
@@ -42,147 +22,62 @@ const Partnerships = () => {
         </div>
       </section>
 
-      {/* Partnership Benefits */}
+      {/* Bank Account Details */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Partner With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Impact</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Create lasting social change</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Reach diverse communities</span>
-                </li>
-              </ul>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Visibility</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Brand recognition</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Media coverage</span>
-                </li>
-              </ul>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Resources</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Access to network</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2" />
-                  <span>Shared resources</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Tiers & Payment */}
-      <section className="section-padding bg-secondary/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Partnership Opportunities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Strategic Partner</h3>
-              <p className="mb-4">Long-term collaboration with deep integration and shared objectives.</p>
-              <p className="text-2xl font-bold mb-6">$10,000 / year</p>
-              <Button onClick={() => document.getElementById('payment-form')?.scrollIntoView({ behavior: 'smooth' })} className="w-full">
-                Get Started
-              </Button>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Program Sponsor</h3>
-              <p className="mb-4">Support specific programs or initiatives with targeted resources.</p>
-              <p className="text-2xl font-bold mb-6">$5,000 / year</p>
-              <Button onClick={() => document.getElementById('payment-form')?.scrollIntoView({ behavior: 'smooth' })} className="w-full">
-                Learn More
-              </Button>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Community Partner</h3>
-              <p className="mb-4">Collaborate on community projects and local initiatives.</p>
-              <p className="text-2xl font-bold mb-6">$2,500 / year</p>
-              <Button onClick={() => document.getElementById('payment-form')?.scrollIntoView({ behavior: 'smooth' })} className="w-full">
-                Join Now
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Payment Form */}
-      <section id="payment-form" className="section-padding">
-        <div className="max-w-md mx-auto">
-          <div className="glass p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-6 text-center">Payment Details</h3>
-            <form onSubmit={handlePayment} className="space-y-4">
-              <div>
-                <label htmlFor="cardName" className="block text-sm font-medium mb-1">
-                  Name on Card
-                </label>
-                <Input
-                  id="cardName"
-                  placeholder="John Doe"
-                  value={paymentDetails.name}
-                  onChange={(e) => setPaymentDetails({ ...paymentDetails, name: e.target.value })}
-                  required
-                />
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Bank Account Details</h2>
+          
+          <div className="space-y-10">
+            {/* USD Account */}
+            <div className="glass p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-primary">USD</h3>
+              <div className="space-y-2">
+                <p><strong>Beneficiary bank:</strong> Access Bank Plc</p>
+                <p><strong>Account Name:</strong> Remnant Christian Network Theological Seminary - Adullam</p>
+                <p><strong>Account No:</strong> 1665250883</p>
+                <p><strong>Swift Code:</strong> ABNGNGLA</p>
+                <p><strong>Routing Number:</strong> 021000089</p>
+                <p><strong>Intermediary bank:</strong> Citibank...CITIUS33</p>
               </div>
-              <div>
-                <label htmlFor="cardNumber" className="block text-sm font-medium mb-1">
-                  Card Number
-                </label>
-                <Input
-                  id="cardNumber"
-                  placeholder="1234 5678 9012 3456"
-                  value={paymentDetails.cardNumber}
-                  onChange={(e) => setPaymentDetails({ ...paymentDetails, cardNumber: e.target.value })}
-                  required
-                />
+            </div>
+            
+            {/* NAIRA Account */}
+            <div className="glass p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-primary">NAIRA</h3>
+              <div className="space-y-2">
+                <p><strong>Beneficiary bank:</strong> Access Bank Plc</p>
+                <p><strong>Account Name:</strong> Remnant Christian Network Theological Seminary - Adullam</p>
+                <p><strong>Account No:</strong> 1652191540</p>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="expiryDate" className="block text-sm font-medium mb-1">
-                    Expiry Date
-                  </label>
-                  <Input
-                    id="expiryDate"
-                    placeholder="MM/YY"
-                    value={paymentDetails.expiryDate}
-                    onChange={(e) => setPaymentDetails({ ...paymentDetails, expiryDate: e.target.value })}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="cvv" className="block text-sm font-medium mb-1">
-                    CVV
-                  </label>
-                  <Input
-                    id="cvv"
-                    placeholder="123"
-                    value={paymentDetails.cvv}
-                    onChange={(e) => setPaymentDetails({ ...paymentDetails, cvv: e.target.value })}
-                    required
-                  />
-                </div>
+            </div>
+            
+            {/* GBP Account */}
+            <div className="glass p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-primary">GBP</h3>
+              <div className="space-y-2">
+                <p><strong>Beneficiary bank:</strong> Access Bank Plc</p>
+                <p><strong>Account Name:</strong> Remnant Christian Network Theological Seminary - Adullam</p>
+                <p><strong>Account No:</strong> 1667594370</p>
+                <p><strong>Banks Swift code:</strong> ABNGNGLA</p>
+                <p><strong>Beneficiary banks IBAN NO:</strong> GB27CITI18500811071211</p>
+                <p><strong>Intermediary Bank Swift code:</strong> CITIGB2L</p>
+                <p><strong>Sort code:</strong> 185008</p>
               </div>
-              <Button type="submit" className="w-full">
-                <CreditCard className="w-4 h-4 mr-2" /> Process Payment
-              </Button>
-            </form>
+            </div>
+            
+            {/* EURO Account */}
+            <div className="glass p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-primary">EURO</h3>
+              <div className="space-y-2">
+                <p><strong>Beneficiary bank:</strong> Access Bank Plc</p>
+                <p><strong>Account Name:</strong> Remnant Christian Network Theological Seminary - Adullam</p>
+                <p><strong>Account No:</strong> 1664879355</p>
+                <p><strong>Banks Swift code:</strong> ABNGNGLA</p>
+                <p><strong>Beneficiary banks IBAN NO:</strong> GB74CITI18500811071238</p>
+                <p><strong>Intermediary Bank Swift code:</strong> CITIGB2L</p>
+                <p><strong>Sort code:</strong> 185008</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
