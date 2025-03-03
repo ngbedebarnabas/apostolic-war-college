@@ -1,14 +1,22 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const Programmes = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="section-padding bg-primary text-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative section-padding min-h-[60vh] flex items-center justify-center">
+        <div className="absolute inset-0">
+          <img
+            src="/lovable-uploads/72f32702-b826-4dbb-97cc-d3282b2e80ad.png"
+            alt="Programmes Hero"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Programmes</h1>
           <p className="text-lg md:text-xl">
             Discover opportunities for growth and development
@@ -80,6 +88,8 @@ const Programmes = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

@@ -31,6 +31,12 @@ const Footer = () => {
               <li>
                 <Link to="/partnerships" className="text-sm text-white/80 hover:text-white">Partnerships</Link>
               </li>
+              <li>
+                <a href="https://adullam.ng" target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white">Adullam</a>
+              </li>
+              <li>
+                <a href="https://rcnglobal.org" target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white">RCN Global</a>
+              </li>
             </ul>
           </div>
 
@@ -38,9 +44,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>Email: info@example.com</li>
-              <li>Phone: +1 234 567 890</li>
-              <li>Address: 123 Main St, City, Country</li>
+              <li>Email: info@apostolicwc.org</li>
+              <li>Phone: +234 807 309 5885</li>
+              <li>Address: No. 4 Remnant Avenue, Opposite State Library, Wurukum, Makurdi</li>
             </ul>
           </div>
 
