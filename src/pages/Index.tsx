@@ -36,13 +36,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
+      {/* Introduction Section - Updated title and content */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Welcome to Our Initiative</h2>
-          <p className="text-lg mb-8">
-            We bring together organizations and individuals to create lasting positive change through innovative programmes and strategic partnerships.
+          <h2 className="text-3xl font-bold mb-6">Welcome to The Apostolic War College</h2>
+          <p className="text-lg mb-6">
+            The Apostolic War College serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
           </p>
+          <p className="text-lg mb-6">By the end of training at the Apostolic War College, participants will:</p>
+          <ul className="text-left list-disc pl-6 mx-auto max-w-3xl space-y-2 mb-8">
+            <li>Understand the apostolic mandate and its role in the End-time agenda.</li>
+            <li>Gain insight into the fundamentals of the supernatural and how to walk in them.</li>
+            <li>Grasp the kingdom fundamentals necessary for advancing God's dominion in various spheres (Supernatural and Physical).</li>
+            <li>Develop an awareness of spiritual communications and how to perceive, discern, understand, interpret, and apply divine instructions.</li>
+            <li>Experience practical engagement in intensive prayer, spiritual exercises, and their implication to our contemporary world.</li>
+            <li>Be equipped for effective spiritual warfare strategies and kingdom governance.</li>
+          </ul>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="flex flex-col items-center">
               <Users className="h-12 w-12 text-primary mb-4" />
@@ -116,56 +125,55 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Statistics */}
+      {/* Impact Statistics - Updated with smaller numbers */}
       <section className="section-padding bg-primary text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <h3 className="text-4xl font-bold mb-2">1000+</h3>
+              <h3 className="text-4xl font-bold mb-2">50+</h3>
               <p>Students Enrolled</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">50+</h3>
+              <h3 className="text-4xl font-bold mb-2">10+</h3>
               <p>Partner Organizations</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">25+</h3>
+              <h3 className="text-4xl font-bold mb-2">5+</h3>
               <p>Countries Reached</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">100+</h3>
+              <h3 className="text-4xl font-bold mb-2">20+</h3>
               <p>Success Stories</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Programme Highlights */}
+      {/* Programme Highlights - Updated to match the programme page */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Our Programmes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Programme Cards */}
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Education Initiative</h3>
-              <p className="mb-4">Empowering through knowledge and skills development.</p>
-              <Link to="/programmes" className="text-primary hover:underline">
-                Learn more
-              </Link>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Innovation Hub</h3>
-              <p className="mb-4">Fostering creativity and technological advancement.</p>
-              <Link to="/programmes" className="text-primary hover:underline">
-                Learn more
-              </Link>
-            </div>
-            <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Community Outreach</h3>
-              <p className="mb-4">Creating lasting impact in local communities.</p>
-              <Link to="/programmes" className="text-primary hover:underline">
-                Learn more
-              </Link>
+          <div className="glass p-8 rounded-lg">
+            <h3 className="text-2xl font-bold mb-4">Apostolic War College – Module 1</h3>
+            <p className="mb-6 text-lg">
+              Module 1 is designed as an introduction to supernatural realities essential for believers engaged in spiritual warfare and kingdom advancement. This module is structured to build a robust understanding of the supernatural dimension in which believers operate and how it can be applied in our world today in family life, ministry, and the marketplace.
+            </p>
+            
+            <h4 className="text-xl font-bold mb-4">Objectives</h4>
+            <p className="mb-4">By the end of this training, participants will:</p>
+            <ol className="list-decimal pl-6 space-y-2 mb-6">
+              <li>Understand the apostolic mandate and its role in the End-time agenda.</li>
+              <li>Gain insight into the fundamentals of the supernatural and how to walk in them.</li>
+              <li>Grasp the kingdom fundamentals necessary for advancing God's dominion in various spheres (Supernatural and Physical).</li>
+              <li>Develop an awareness of spiritual communications and how to perceive, discern, understand, interpret, and apply divine instructions.</li>
+              <li>Experience practical engagement in intensive prayer, spiritual exercises, and their implication to our contemporary world.</li>
+              <li>Be equipped for effective spiritual warfare strategies and kingdom governance.</li>
+            </ol>
+            
+            <div className="mt-6">
+              <Button asChild>
+                <Link to="#register">Apply Now</Link>
+              </Button>
             </div>
           </div>
         </div>
