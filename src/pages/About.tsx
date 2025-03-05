@@ -18,7 +18,7 @@ const About = () => {
         <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
           <p className="text-lg md:text-xl">
-            Transforming lives through education and innovation
+            To equip the saints for End-time Spiritual Warfare and Kingdom advancement across every sphere of society.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ const About = () => {
           <div className="glass p-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
             <p className="text-lg">
-              Christ-like leaders through sound biblical doctrine and theology, to bear accurate witness unto Jesus both within the Church and in the marketplace.
+              To train Christ-like leaders through sound biblical doctrine and theology, to bear accurate witness unto Jesus both within the Church and in the marketplace.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <Heart className="h-12 w-12 text-primary" />

@@ -28,10 +28,22 @@ const Footer = () => {
                 <Link to="/programmes" className="text-sm text-white/80 hover:text-white">Programmes</Link>
               </li>
               <li>
-                <a href="https://adullam.ng" target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white">Adullam</a>
+                <a href="https://adullam.ng" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white">
+                  <img 
+                    src="/lovable-uploads/a8a8eb95-f274-453d-bffc-2b730ecea1e0.png" 
+                    alt="Adullam" 
+                    className="h-8 w-auto"
+                  />
+                </a>
               </li>
               <li>
-                <a href="https://rcnglobal.org" target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-white">RCN Global</a>
+                <a href="https://rcnglobal.org" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white">
+                  <img 
+                    src="/lovable-uploads/5d78c048-3f72-49d3-b9af-0b4d54952863.png" 
+                    alt="RCN Global" 
+                    className="h-8 w-auto"
+                  />
+                </a>
               </li>
             </ul>
           </div>
