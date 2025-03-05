@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import RegistrationForm from "@/components/RegistrationForm";
@@ -30,7 +31,7 @@ const Index = () => {
               <Link to="/programmes">Explore Our Programmes</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20">
-              <Link to="/partnerships">Join Our Partnerships</Link>
+              <Link to="/programmes">Join Our Programmes</Link>
             </Button>
           </div>
         </div>
@@ -43,15 +44,6 @@ const Index = () => {
           <p className="text-lg mb-6">
             The Apostolic War College serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
           </p>
-          <p className="text-lg mb-6">By the end of training at the Apostolic War College, participants will:</p>
-          <ul className="text-left list-disc pl-6 mx-auto max-w-3xl space-y-2 mb-8">
-            <li>Understand the apostolic mandate and its role in the End-time agenda.</li>
-            <li>Gain insight into the fundamentals of the supernatural and how to walk in them.</li>
-            <li>Grasp the kingdom fundamentals necessary for advancing God's dominion in various spheres (Supernatural and Physical).</li>
-            <li>Develop an awareness of spiritual communications and how to perceive, discern, understand, interpret, and apply divine instructions.</li>
-            <li>Experience practical engagement in intensive prayer, spiritual exercises, and their implication to our contemporary world.</li>
-            <li>Be equipped for effective spiritual warfare strategies and kingdom governance.</li>
-          </ul>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="flex flex-col items-center">
               <Users className="h-12 w-12 text-primary mb-4" />
@@ -125,30 +117,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Statistics - Updated with smaller numbers */}
-      <section className="section-padding bg-primary text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <h3 className="text-4xl font-bold mb-2">50+</h3>
-              <p>Students Enrolled</p>
-            </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">10+</h3>
-              <p>Partner Organizations</p>
-            </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">5+</h3>
-              <p>Countries Reached</p>
-            </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">20+</h3>
-              <p>Success Stories</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Programme Highlights - Updated to match the programme page */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-6xl mx-auto">
@@ -187,17 +155,6 @@ const Index = () => {
             Take the first step towards your future by registering for one of our programmes.
           </p>
           <RegistrationForm />
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="section-padding">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-lg mb-8">
-            Subscribe to our newsletter for the latest updates on our programmes and partnerships.
-          </p>
-          <NewsletterSignup />
         </div>
       </section>
 
