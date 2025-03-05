@@ -41,7 +41,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm text-white/80">
               <li>Email: info@apostolicwc.org</li>
-              <li>Phone: (WhatsApp Only) +234 807 309 5885</li>
+              <li>(WhatsApp Only) +234 807 309 5885</li>
               <li>Address: No. 4 Remnant Avenue, Opposite State Library, Wurukum, Makurdi</li>
             </ul>
           </div>

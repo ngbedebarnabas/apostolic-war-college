@@ -31,9 +31,6 @@ const Navbar = () => {
             <Link to="/programmes" className="nav-link">
               Programmes
             </Link>
-            <Link to="/partnerships" className="nav-link">
-              Partnerships
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,13 +70,6 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Programmes
-            </Link>
-            <Link
-              to="/partnerships"
-              className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
-              onClick={toggleMenu}
-            >
-              Partnerships
             </Link>
           </div>
         </div>
