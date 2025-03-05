@@ -29,7 +29,7 @@ const About = () => {
           <div className="glass p-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="text-lg">
-              To provide accessible, quality education and innovative learning experiences that empower individuals to reach their full potential.
+              To equip the saints for End-time Spiritual Warfare and Kingdom advancement across every sphere of society.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <Target className="h-12 w-12 text-primary" />
@@ -41,7 +41,7 @@ const About = () => {
           <div className="glass p-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
             <p className="text-lg">
-              To be a leading institution in transformative education, creating positive change in communities worldwide.
+              Christ-like leaders through sound biblical doctrine and theology, to bear accurate witness unto Jesus both within the Church and in the marketplace.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <Heart className="h-12 w-12 text-primary" />
