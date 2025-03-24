@@ -18,6 +18,14 @@ import {
   FormLabel,
   FormMessage
 } from "@/components/ui/form";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -78,6 +86,7 @@ type FormValues = z.infer<typeof formSchema>;
 const RegistrationForm = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -106,6 +115,7 @@ const RegistrationForm = () => {
           description: "Thank you for registering for the Apostolic War College.",
         });
         form.reset();
+        setShowSuccessDialog(true);
       } else {
         const errorData = await response.json();
         throw new Error(errorData.message || "Failed to submit form");
@@ -133,7 +143,7 @@ const RegistrationForm = () => {
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Title *</FormLabel>
+                    <FormLabel className="text-left">Title *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -163,7 +173,7 @@ const RegistrationForm = () => {
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>First Name *</FormLabel>
+                    <FormLabel className="text-left">First Name *</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter your first name" {...field} />
                     </FormControl>
@@ -178,7 +188,7 @@ const RegistrationForm = () => {
                 name="middleName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Middle Name (Optional)</FormLabel>
+                    <FormLabel className="text-left">Middle Name (Optional)</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter your middle name" {...field} />
                     </FormControl>
@@ -193,7 +203,7 @@ const RegistrationForm = () => {
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Last Name *</FormLabel>
+                    <FormLabel className="text-left">Last Name *</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter your last name" {...field} />
                     </FormControl>
@@ -208,7 +218,7 @@ const RegistrationForm = () => {
                 name="gender"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Gender *</FormLabel>
+                    <FormLabel className="text-left">Gender *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -231,7 +241,7 @@ const RegistrationForm = () => {
                 name="age"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Age *</FormLabel>
+                    <FormLabel className="text-left">Age *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -258,7 +268,7 @@ const RegistrationForm = () => {
                 name="maritalStatus"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Marital Status *</FormLabel>
+                    <FormLabel className="text-left">Marital Status *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -284,7 +294,7 @@ const RegistrationForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email *</FormLabel>
+                    <FormLabel className="text-left">Email *</FormLabel>
                     <FormControl>
                       <Input type="email" placeholder="Enter your email" {...field} />
                     </FormControl>
@@ -299,7 +309,7 @@ const RegistrationForm = () => {
                 name="phoneNumber"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone Number (WhatsApp preferred) *</FormLabel>
+                    <FormLabel className="text-left">Phone Number (WhatsApp preferred) *</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter your phone number" {...field} />
                     </FormControl>
@@ -315,7 +325,7 @@ const RegistrationForm = () => {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Address *</FormLabel>
+                  <FormLabel className="text-left">Address *</FormLabel>
                   <FormControl>
                     <Input placeholder="Enter your address" {...field} />
                   </FormControl>
@@ -331,7 +341,7 @@ const RegistrationForm = () => {
                 name="bornAgain"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Are you born again? *</FormLabel>
+                    <FormLabel className="text-left">Are you born again? *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -355,7 +365,7 @@ const RegistrationForm = () => {
                 name="churchName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name of Your Church *</FormLabel>
+                    <FormLabel className="text-left">Name of Your Church *</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter your church name" {...field} />
                     </FormControl>
@@ -370,7 +380,7 @@ const RegistrationForm = () => {
                 name="isMinister"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Are you serving as a Minister under a Denomination? *</FormLabel>
+                    <FormLabel className="text-left">Are you serving as a Minister under a Denomination? *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -393,7 +403,7 @@ const RegistrationForm = () => {
                 name="denominationName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>If your answer to the previous question is Yes, kindly name the denomination (Optional)</FormLabel>
+                    <FormLabel className="text-left">If your answer to the previous question is Yes, kindly name the denomination (Optional)</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter denomination name" {...field} />
                     </FormControl>
@@ -408,7 +418,7 @@ const RegistrationForm = () => {
                 name="isPioneer"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Are you a pioneer of a Church/Ministry? *</FormLabel>
+                    <FormLabel className="text-left">Are you a pioneer of a Church/Ministry? *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -431,7 +441,7 @@ const RegistrationForm = () => {
                 name="ministryName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>If your answer to the previous question is Yes, kindly name the Church/Ministry</FormLabel>
+                    <FormLabel className="text-left">If your answer to the previous question is Yes, kindly name the Church/Ministry</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter ministry name" {...field} />
                     </FormControl>
@@ -446,7 +456,7 @@ const RegistrationForm = () => {
                 name="churchRole"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Are you any of the following? *</FormLabel>
+                    <FormLabel className="text-left">Are you any of the following? *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
@@ -478,6 +488,29 @@ const RegistrationForm = () => {
           </form>
         </Form>
       </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Registration Successful!</DialogTitle>
+            <DialogDescription>
+              Congratulations on your successful registration for the Apostolic War College. Kindly click the button below to join our WhatsApp community.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="sm:justify-center">
+            <Button 
+              as="a" 
+              href="https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              Join WhatsApp Community
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
