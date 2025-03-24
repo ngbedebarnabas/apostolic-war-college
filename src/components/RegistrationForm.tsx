@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Input } from "@/components/ui/input";
@@ -500,11 +499,8 @@ const RegistrationForm = () => {
           </DialogHeader>
           <DialogFooter className="sm:justify-center">
             <Button 
-              as="a" 
-              href="https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG" 
-              target="_blank"
-              rel="noopener noreferrer"
               className="w-full"
+              onClick={() => window.open("https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG", "_blank", "noopener,noreferrer")}
             >
               Join WhatsApp Community
             </Button>
