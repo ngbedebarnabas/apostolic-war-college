@@ -2,8 +2,8 @@
 <?php
 // Database connection details
 $dbHost = 'localhost';
-$dbName = 'awc';
-$dbUser = 'awc';
+$dbName = 'u499616432_awc';
+$dbUser = 'u499616432_awc';
 $dbPass = 'Apostolicwc@2025';
 
 // Get the JSON data from the request
