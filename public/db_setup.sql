@@ -1,7 +1,7 @@
 
 -- SQL Script to create the registrations table
--- Database name: awc
--- Username: awc
+-- Database name: u499616432_awc
+-- Username: u499616432_awc
 -- Password: Apostolicwc@2025
 
 -- Create the registrations table
