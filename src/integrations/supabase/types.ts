@@ -9,7 +9,72 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      event_registrations: {
+        Row: {
+          address: string
+          age: string
+          born_again: string
+          church_member: string
+          church_name: string
+          church_role: string
+          created_at: string
+          email: string
+          event_id: string
+          first_name: string
+          gender: string
+          id: string
+          is_pioneer: string
+          last_name: string
+          marital_status: string
+          middle_name: string | null
+          ministry_name: string | null
+          phone_number: string
+          title: string
+        }
+        Insert: {
+          address: string
+          age: string
+          born_again: string
+          church_member: string
+          church_name: string
+          church_role: string
+          created_at?: string
+          email: string
+          event_id: string
+          first_name: string
+          gender: string
+          id?: string
+          is_pioneer: string
+          last_name: string
+          marital_status: string
+          middle_name?: string | null
+          ministry_name?: string | null
+          phone_number: string
+          title: string
+        }
+        Update: {
+          address?: string
+          age?: string
+          born_again?: string
+          church_member?: string
+          church_name?: string
+          church_role?: string
+          created_at?: string
+          email?: string
+          event_id?: string
+          first_name?: string
+          gender?: string
+          id?: string
+          is_pioneer?: string
+          last_name?: string
+          marital_status?: string
+          middle_name?: string | null
+          ministry_name?: string | null
+          phone_number?: string
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

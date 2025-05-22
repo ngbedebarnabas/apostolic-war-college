@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { 
@@ -29,6 +30,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   title: z.string({
@@ -99,26 +101,41 @@ const RegistrationForm = () => {
   const onSubmit = async (values: FormValues) => {
     setIsLoading(true);
     try {
-      // Form submission to PHP backend
-      const response = await fetch("register.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      // Submit data to Supabase
+      const { error } = await supabase
+        .from('event_registrations')
+        .insert([
+          { 
+            title: values.title,
+            first_name: values.firstName,
+            middle_name: values.middleName || null,
+            last_name: values.lastName,
+            gender: values.gender,
+            age: values.age,
+            marital_status: values.maritalStatus,
+            email: values.email,
+            phone_number: values.phoneNumber,
+            address: values.address,
+            born_again: values.bornAgain,
+            church_member: "Yes", // Default value since it's not directly in the form
+            church_name: values.churchName,
+            church_role: values.churchRole,
+            is_pioneer: values.isPioneer,
+            ministry_name: values.ministryName || null,
+            event_id: "war-college" // Fixed event ID for this form
+          }
+        ]);
 
-      if (response.ok) {
-        toast({
-          title: "Registration successful!",
-          description: "Thank you for registering for the Apostolic War College.",
-        });
-        form.reset();
-        setShowSuccessDialog(true);
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to submit form");
+      if (error) {
+        throw new Error(error.message || "Failed to submit form");
       }
+
+      toast({
+        title: "Registration successful!",
+        description: "Thank you for registering for the Apostolic War College.",
+      });
+      form.reset();
+      setShowSuccessDialog(true);
     } catch (error) {
       toast({
         title: "Registration failed",
