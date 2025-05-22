@@ -28,16 +28,16 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn">
             <Button asChild size="lg">
-              <Link to="/programmes">Explore Our Programmes</Link>
+              <Link to="/about">Learn More</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20">
-              <Link to="/programmes">Join Our Programmes</Link>
+              <Link to="/events">View Events</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section - Updated title and content */}
+      {/* Introduction Section */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">Welcome to The Apostolic War College</h2>

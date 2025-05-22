@@ -28,8 +28,8 @@ const Navbar = () => {
             <Link to="/about" className="nav-link">
               About Us
             </Link>
-            <Link to="/programmes" className="nav-link">
-              Programmes
+            <Link to="/events" className="nav-link">
+              Events
             </Link>
           </div>
 
@@ -65,11 +65,11 @@ const Navbar = () => {
               About Us
             </Link>
             <Link
-              to="/programmes"
+              to="/events"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
-              Programmes
+              Events
             </Link>
           </div>
         </div>

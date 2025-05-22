@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Programmes from "./pages/Programmes";
+import Events from "./pages/Events";
+import EventRegistration from "./pages/EventRegistration";
 import NotFound from "./pages/NotFound";
 
 const App: React.FC = () => {
@@ -27,7 +28,8 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/programmes" element={<Programmes />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/events/:eventId/register" element={<EventRegistration />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
