@@ -1,6 +1,5 @@
-
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -11,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Footer from "@/components/Footer";
 
 // Define the form validation schema
@@ -35,6 +35,8 @@ const formSchema = z.object({
 
 const EventRegistration = () => {
   const { eventId } = useParams();
+  const navigate = useNavigate();
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
   
   // Find the event based on the ID (in a real app, you would fetch this from an API)
   const event = {
@@ -72,48 +74,15 @@ const EventRegistration = () => {
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
-      // Send the form data to the server
-      const response = await fetch("/register.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: data.title,
-          firstName: data.firstName,
-          middleName: data.middleName,
-          lastName: data.lastName,
-          gender: data.gender,
-          age: data.age,
-          maritalStatus: data.maritalStatus,
-          email: data.email,
-          phoneNumber: data.phoneNumber,
-          address: data.address,
-          bornAgain: data.bornAgain,
-          churchName: data.churchName,
-          isMinister: data.churchRole === "Senior Minister" || data.churchRole === "Associate Minister" ? "Yes" : "No",
-          denominationName: data.churchName,
-          isPioneer: data.isPioneer,
-          ministryName: data.ministryName,
-          churchRole: data.churchRole,
-        }),
-      });
+      // In a real implementation, this would send data to Supabase
+      // For now, we'll simulate a successful registration
+      console.log("Form data to be sent to Supabase:", data);
       
-      const result = await response.json();
+      // Show success dialog
+      setShowSuccessDialog(true);
       
-      if (result.success) {
-        toast({
-          title: "Registration successful",
-          description: "You have successfully registered for this event.",
-        });
-        form.reset();
-      } else {
-        toast({
-          title: "Registration failed",
-          description: result.message || "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
-      }
+      // Reset form
+      form.reset();
     } catch (error) {
       toast({
         title: "Registration failed",
@@ -121,6 +90,11 @@ const EventRegistration = () => {
         variant: "destructive",
       });
     }
+  };
+
+  const joinWhatsAppGroup = () => {
+    window.open("https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG", "_blank");
+    setShowSuccessDialog(false);
   };
 
   return (
@@ -477,6 +451,26 @@ const EventRegistration = () => {
           </Card>
         </div>
       </section>
+      
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Registration Successful!</DialogTitle>
+            <DialogDescription>
+              Thank you for registering for the {event.title}. Your registration has been received.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="py-4">
+            <p>Join our WhatsApp group to receive updates and connect with other participants.</p>
+          </div>
+          <DialogFooter>
+            <Button onClick={joinWhatsAppGroup} className="w-full">
+              Join WhatsApp Group
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
       
       <Footer />
     </div>

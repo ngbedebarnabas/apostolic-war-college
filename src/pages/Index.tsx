@@ -1,12 +1,23 @@
 
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import RegistrationForm from "@/components/RegistrationForm";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
+  const event = {
+    id: "bootcamp-2025",
+    title: "21 Days Fasting Bootcamp",
+    date: "2nd-22nd June 2025",
+    time: "8AM DAILY",
+    location: "Adullam Chapel, No 4, Remnant Avenue, Opposite State Library, Wurukum Benue State",
+    description: "A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.",
+    host: "Reverend Daniel Ogidi",
+    image: "/lovable-uploads/548ce09c-0683-45aa-8ff8-a6c401462ced.png"
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -44,33 +55,47 @@ const Index = () => {
           <p className="text-lg mb-6">
             The Apostolic War College serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
           </p>
-          
-          <h3 className="text-2xl font-bold mt-8 mb-4">Apostolic War College – Module 1</h3>
-          <p className="text-lg mb-6">
-            Module 1 is designed as an introduction to supernatural realities essential for believers engaged in spiritual warfare and kingdom advancement. This module is structured to build a robust understanding of the supernatural dimension in which believers operate and how it can be applied in our world today in family life, ministry, and the marketplace.
-          </p>
-          
-          <h4 className="text-xl font-bold mt-8 mb-4">Objectives</h4>
-          <p className="mb-4 text-lg">By the end of this training, participants will:</p>
-          <ul className="list-disc pl-6 space-y-2 mb-6 text-lg">
-            <li>Understand the apostolic mandate and its role in the End-time agenda.</li>
-            <li>Gain insight into the fundamentals of the supernatural and how to walk in them.</li>
-            <li>Grasp the kingdom fundamentals necessary for advancing God's dominion in various spheres (Supernatural and Physical).</li>
-            <li>Develop an awareness of spiritual communications and how to perceive, discern, understand, interpret, and apply divine instructions.</li>
-            <li>Experience practical engagement in intensive prayer, spiritual exercises, and their implication to our contemporary world.</li>
-            <li>Be equipped for effective spiritual warfare strategies and kingdom governance.</li>
-          </ul>
         </div>
       </section>
 
-      {/* Registration Section */}
-      <section id="register" className="section-padding bg-secondary/30">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Register Now</h2>
-          <p className="text-lg mb-8">
-            Take the first step towards your future by registering for one of our programmes.
-          </p>
-          <RegistrationForm />
+      {/* Featured Event Section */}
+      <section className="section-padding bg-primary/10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-center">Featured Event</h2>
+          <div className="max-w-xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-video relative overflow-hidden">
+                <img 
+                  src={event.image} 
+                  alt={event.title} 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">{event.title}</CardTitle>
+                <CardDescription className="flex items-center gap-2 mt-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>{event.date} • {event.time}</span>
+                </CardDescription>
+                <CardDescription className="mt-1">
+                  {event.location}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  {event.description}
+                </p>
+                <p className="text-sm font-semibold mt-3">
+                  Host: {event.host}
+                </p>
+              </CardContent>
+              <CardFooter className="flex justify-end">
+                <Button asChild>
+                  <Link to={`/events/${event.id}/register`}>Register Now</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
         </div>
       </section>
 
