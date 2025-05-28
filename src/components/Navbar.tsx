@@ -31,6 +31,14 @@ const Navbar = () => {
             <Link to="/events" className="nav-link">
               Events
             </Link>
+            <a 
+              href="https://paystack.shop/pay/awcpartner" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="nav-link"
+            >
+              Partnership
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,6 +79,15 @@ const Navbar = () => {
             >
               Events
             </Link>
+            <a
+              href="https://paystack.shop/pay/awcpartner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Partnership
+            </a>
           </div>
         </div>
       )}
