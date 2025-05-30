@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="/" className="text-xl font-semibold">
             <img 
               src="/lovable-uploads/86a1b68d-e975-4e1d-a5e2-8ed52da63bd1.png" 
-              alt="Apostolic War College" 
+              alt="Apostolic Development Centre" 
               className="h-14" 
             />
           </Link>
