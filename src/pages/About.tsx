@@ -56,13 +56,13 @@ const About = () => {
       {/* Values */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">About Adullam & AWC</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">About Adullam & ADC</h2>
           <div className="glass p-8 rounded-lg">
             <p className="mb-6 text-lg">
               RCN Theological Seminary – Adullam exists to equip Christ-like leaders through sound biblical doctrine and theology, to bear accurate witness unto Jesus both within the Church and in the marketplace. Adullam cultivates rigorous minds, passionate hearts, and Christ-centred lifestyle to prepare servant leaders for transformational ministry in a broken and complex world in collaboration with the Church.
             </p>
             <p className="mb-6 text-lg">
-              As part of our specialized training modules, we introduce the Apostolic War College (AWC)—a strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement across every sphere of society. AWC serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
+              As part of our specialized training modules, we introduce the Apostolic Development Centre (ADC)—a strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement across every sphere of society. ADC serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
             </p>
             <h3 className="text-2xl font-bold mb-4">Intended Audience</h3>
             <p className="mb-4 text-lg">This training is specifically designed for:</p>

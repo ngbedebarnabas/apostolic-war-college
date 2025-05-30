@@ -32,7 +32,7 @@ const Index = () => {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">
-            The Apostolic War College (AWC)
+            The Apostolic Development Centre (ADC)
           </h1>
           <p className="text-lg md:text-xl mb-8 animate-fadeIn">
             A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.
@@ -51,9 +51,9 @@ const Index = () => {
       {/* Introduction Section */}
       <section className="section-padding bg-secondary/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Welcome to The Apostolic War College</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Welcome to The Apostolic Development Centre</h2>
           <p className="text-lg mb-6">
-            The Apostolic War College serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
+            The Apostolic Development Centre serves as an intensive training module where believers are immersed in the knowledge, discipline, and spiritual strategies required to contend for the faith and establish God's will in their respective domains.
           </p>
         </div>
       </section>
