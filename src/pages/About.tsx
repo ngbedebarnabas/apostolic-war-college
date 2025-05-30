@@ -9,7 +9,7 @@ const About = () => {
       <section className="relative section-padding min-h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <img
-            src="/lovable-uploads/72f32702-b826-4dbb-97cc-d3282b2e80ad.png"
+            src="/lovable-uploads/aacd1dd4-d8aa-45de-91c4-1a6d28486971.png"
             alt="About Hero"
             className="w-full h-full object-cover"
           />

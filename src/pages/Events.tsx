@@ -23,13 +23,27 @@ const Events = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="pt-24 pb-16 px-4 bg-gradient-to-b from-primary/10 to-background">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Upcoming Events</h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12">
+      {/* Hero Section */}
+      <section className="relative h-[70vh] flex items-center justify-center text-center px-4">
+        <div className="absolute inset-0">
+          <img
+            src="/lovable-uploads/aacd1dd4-d8aa-45de-91c4-1a6d28486971.png"
+            alt="Events Hero"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">Upcoming Events</h1>
+          <p className="text-lg md:text-xl mb-8 animate-fadeIn">
             Join us for these transformative events designed to equip and empower believers.
           </p>
-          
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((event) => (
               <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
