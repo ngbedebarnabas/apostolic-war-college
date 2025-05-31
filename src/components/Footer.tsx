@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/60">
-          <p>&copy; {new Date().getFullYear()} The Apostolic Development Centre. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Apostolic College. All rights reserved.</p>
         </div>
       </div>
     </footer>

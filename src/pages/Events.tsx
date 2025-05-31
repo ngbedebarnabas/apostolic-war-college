@@ -16,7 +16,7 @@ const Events = () => {
       location: "Adullam Chapel, No 4, Remnant Avenue, Opposite State Library, Wurukum Benue State",
       description: "A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.",
       host: "Reverend Daniel Ogidi",
-      image: "/lovable-uploads/548ce09c-0683-45aa-8ff8-a6c401462ced.png"
+      image: "/lovable-uploads/89a05e9c-d2fe-4028-9c30-671c021a4491.png"
     },
     // You can add more events here as needed
   ];
@@ -51,7 +51,7 @@ const Events = () => {
                   <img 
                     src={event.image} 
                     alt={event.title} 
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-contain bg-gradient-to-br from-purple-900 via-pink-500 to-orange-400"
                   />
                 </div>
                 <CardHeader>

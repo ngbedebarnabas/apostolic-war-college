@@ -14,8 +14,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-semibold">
             <img 
-              src="/lovable-uploads/86a1b68d-e975-4e1d-a5e2-8ed52da63bd1.png" 
-              alt="Apostolic Development Centre" 
+              src="/lovable-uploads/8ea5eea3-8eb1-4b3b-9dc2-4e601c37c7b6.png" 
+              alt="Apostolic College" 
               className="h-14" 
             />
           </Link>
