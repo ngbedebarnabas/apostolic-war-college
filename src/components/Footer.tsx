@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Youtube, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,6 +13,34 @@ const Footer = () => {
             <p className="text-sm text-white/80">
               Empowering individuals and organizations through innovative programmes and meaningful partnerships.
             </p>
+            
+            {/* Social Media Links */}
+            <div className="flex space-x-4 mt-4">
+              <a 
+                href="https://youtube.com/@rcn_ac?si=q6snVyGBSU_lMWX1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <Youtube size={24} />
+              </a>
+              <a 
+                href="https://www.facebook.com/share/16ZRrgPysP/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <Facebook size={24} />
+              </a>
+              <a 
+                href="https://www.instagram.com/rcn.ac?igsh=MXY1d2JoMnBhMTZyMA==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -32,7 +61,7 @@ const Footer = () => {
                   <img 
                     src="/lovable-uploads/a8a8eb95-f274-453d-bffc-2b730ecea1e0.png" 
                     alt="Adullam" 
-                    className="h-11 w-auto" // Increased from h-8 to h-11 (approx 40% increase)
+                    className="h-11 w-auto"
                   />
                 </a>
               </li>
@@ -41,7 +70,7 @@ const Footer = () => {
                   <img 
                     src="/lovable-uploads/4ddfed4e-e3d7-4986-8375-35ce73597c9e.png" 
                     alt="RCN Global" 
-                    className="h-11 w-auto" // Increased from h-8 to h-11 (approx 40% increase)
+                    className="h-11 w-auto"
                   />
                 </a>
               </li>
