@@ -157,7 +157,7 @@ const EventRegistration = () => {
   };
 
   const joinWhatsAppGroup = () => {
-    window.open("https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG", "_blank");
+    window.open("https://chat.whatsapp.com/CLFcdIo3gp3DcLbawOTb62", "_blank");
     setShowSuccessDialog(false);
   };
 

@@ -517,7 +517,7 @@ const RegistrationForm = () => {
           <DialogFooter className="sm:justify-center">
             <Button 
               className="w-full"
-              onClick={() => window.open("https://chat.whatsapp.com/KG4OWNpWxoD7gaj8CcNuhG", "_blank", "noopener,noreferrer")}
+              onClick={() => window.open("https://chat.whatsapp.com/CLFcdIo3gp3DcLbawOTb62", "_blank", "noopener,noreferrer")}
             >
               Join WhatsApp Community
             </Button>
