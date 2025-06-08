@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const PrayerRequest = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<FormValues>({
@@ -48,11 +50,7 @@ const PrayerRequest = () => {
         throw error;
       }
 
-      toast({
-        title: "Prayer Request Submitted",
-        description: "Your prayer request has been submitted successfully. We'll be praying for you!",
-      });
-
+      setShowSuccessModal(true);
       form.reset();
     } catch (error) {
       console.error("Error submitting prayer request:", error);
@@ -166,6 +164,23 @@ const PrayerRequest = () => {
           </div>
         </div>
       </section>
+
+      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-green-600">Prayer Request Submitted!</DialogTitle>
+            <DialogDescription className="text-center">
+              Thank you for sharing your prayer request with us. We'll be praying for you and believe that God will answer according to His perfect will.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center">
+            <Button onClick={() => setShowSuccessModal(false)} className="px-8">
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <Footer />
     </div>
   );
