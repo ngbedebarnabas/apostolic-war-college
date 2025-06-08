@@ -42,7 +42,7 @@ const ShareTestimony = () => {
     try {
       const { error } = await supabase
         .from("testimonies")
-        .insert([values]);
+        .insert(values);
 
       if (error) {
         throw error;

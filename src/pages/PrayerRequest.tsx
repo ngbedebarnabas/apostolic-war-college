@@ -42,7 +42,7 @@ const PrayerRequest = () => {
     try {
       const { error } = await supabase
         .from("prayer_requests")
-        .insert([values]);
+        .insert(values);
 
       if (error) {
         throw error;
