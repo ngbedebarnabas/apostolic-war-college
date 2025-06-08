@@ -31,6 +31,12 @@ const Navbar = () => {
             <Link to="/events" className="nav-link">
               Events
             </Link>
+            <Link to="/prayer-request" className="nav-link">
+              Prayer Request
+            </Link>
+            <Link to="/share-testimony" className="nav-link">
+              Share Testimony
+            </Link>
             <a 
               href="https://paystack.shop/pay/awcpartner" 
               target="_blank" 
@@ -78,6 +84,20 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Events
+            </Link>
+            <Link
+              to="/prayer-request"
+              className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Prayer Request
+            </Link>
+            <Link
+              to="/share-testimony"
+              className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Share Testimony
             </Link>
             <a
               href="https://paystack.shop/pay/awcpartner"

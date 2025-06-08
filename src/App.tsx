@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import EventRegistration from "./pages/EventRegistration";
+import PrayerRequest from "./pages/PrayerRequest";
+import ShareTestimony from "./pages/ShareTestimony";
 import NotFound from "./pages/NotFound";
 
 const App: React.FC = () => {
@@ -30,6 +32,8 @@ const App: React.FC = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/events/:eventId/register" element={<EventRegistration />} />
+                <Route path="/prayer-request" element={<PrayerRequest />} />
+                <Route path="/share-testimony" element={<ShareTestimony />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

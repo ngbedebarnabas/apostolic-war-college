@@ -75,6 +75,66 @@ export type Database = {
         }
         Relationships: []
       }
+      prayer_requests: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          location: string
+          phone_number: string
+          prayer_request: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          location: string
+          phone_number: string
+          prayer_request: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          location?: string
+          phone_number?: string
+          prayer_request?: string
+        }
+        Relationships: []
+      }
+      testimonies: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          location: string
+          phone_number: string
+          testimony: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          location: string
+          phone_number: string
+          testimony: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          location?: string
+          phone_number?: string
+          testimony?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
