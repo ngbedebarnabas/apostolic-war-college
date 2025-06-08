@@ -31,10 +31,10 @@ const Navbar = () => {
             <Link to="/events" className="nav-link">
               Events
             </Link>
-            <Link to="/prayer-request" className="nav-link">
+            <Link to="/prayerrequest" className="nav-link">
               Prayer Request
             </Link>
-            <Link to="/share-testimony" className="nav-link">
+            <Link to="/testimony" className="nav-link">
               Share Testimony
             </Link>
             <a 
@@ -86,14 +86,14 @@ const Navbar = () => {
               Events
             </Link>
             <Link
-              to="/prayer-request"
+              to="/prayerrequest"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
               Prayer Request
             </Link>
             <Link
-              to="/share-testimony"
+              to="/testimony"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >

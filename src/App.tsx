@@ -32,8 +32,8 @@ const App: React.FC = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/events/:eventId/register" element={<EventRegistration />} />
-                <Route path="/prayer-request" element={<PrayerRequest />} />
-                <Route path="/share-testimony" element={<ShareTestimony />} />
+                <Route path="/prayerrequest" element={<PrayerRequest />} />
+                <Route path="/testimony" element={<ShareTestimony />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

@@ -42,9 +42,18 @@ const PrayerRequest = () => {
     setIsSubmitting(true);
     
     try {
+      // Explicitly type the data to ensure all required fields are present
+      const prayerRequestData = {
+        full_name: values.full_name,
+        location: values.location,
+        phone_number: values.phone_number,
+        email: values.email,
+        prayer_request: values.prayer_request,
+      };
+
       const { error } = await supabase
         .from("prayer_requests")
-        .insert(values);
+        .insert(prayerRequestData);
 
       if (error) {
         throw error;
