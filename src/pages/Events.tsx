@@ -16,7 +16,8 @@ const Events = () => {
       location: "Adullam Chapel, No 4, Remnant Avenue, Opposite State Library, Wurukum Benue State",
       description: "A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.",
       host: "Reverend Daniel Ogidi",
-      image: "/lovable-uploads/89a05e9c-d2fe-4028-9c30-671c021a4491.png"
+      image: "/lovable-uploads/89a05e9c-d2fe-4028-9c30-671c021a4491.png",
+      isPassed: true
     },
     // You can add more events here as needed
   ];
@@ -53,6 +54,11 @@ const Events = () => {
                     alt={event.title} 
                     className="w-full h-full object-contain bg-gradient-to-br from-purple-900 via-pink-500 to-orange-400"
                   />
+                  {event.isPassed && (
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                      <span className="text-white font-semibold text-lg">Event Completed</span>
+                    </div>
+                  )}
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{event.title}</CardTitle>
@@ -73,9 +79,15 @@ const Events = () => {
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-end">
-                  <Button asChild>
-                    <Link to={`/events/${event.id}/register`}>Register Now</Link>
-                  </Button>
+                  {event.isPassed ? (
+                    <Button variant="secondary" disabled>
+                      Registration Closed
+                    </Button>
+                  ) : (
+                    <Button asChild>
+                      <Link to={`/events/${event.id}/register`}>Register Now</Link>
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             ))}

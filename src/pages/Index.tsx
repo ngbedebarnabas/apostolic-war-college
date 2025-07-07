@@ -15,7 +15,8 @@ const Index = () => {
     location: "Adullam Chapel, No 4, Remnant Avenue, Opposite State Library, Wurukum Benue State",
     description: "A strategic training platform designed to equip the saints for End-time Spiritual Warfare and Kingdom advancement.",
     host: "Reverend Daniel Ogidi",
-    image: "/lovable-uploads/89a05e9c-d2fe-4028-9c30-671c021a4491.png"
+    image: "/lovable-uploads/89a05e9c-d2fe-4028-9c30-671c021a4491.png",
+    isPassed: true
   };
 
   return (
@@ -61,7 +62,7 @@ const Index = () => {
       {/* Featured Event Section */}
       <section className="section-padding bg-primary/10">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Featured Event</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Recent Event</h2>
           <div className="max-w-xl mx-auto">
             <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video relative overflow-hidden">
@@ -70,6 +71,11 @@ const Index = () => {
                   alt={event.title} 
                   className="w-full h-full object-contain bg-gradient-to-br from-purple-900 via-pink-500 to-orange-400"
                 />
+                {event.isPassed && (
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                    <span className="text-white font-semibold text-lg">Event Completed</span>
+                  </div>
+                )}
               </div>
               <CardHeader>
                 <CardTitle className="text-xl">{event.title}</CardTitle>
@@ -90,9 +96,15 @@ const Index = () => {
                 </p>
               </CardContent>
               <CardFooter className="flex justify-end">
-                <Button asChild>
-                  <Link to={`/events/${event.id}/register`}>Register Now</Link>
-                </Button>
+                {event.isPassed ? (
+                  <Button variant="secondary" disabled>
+                    Registration Closed
+                  </Button>
+                ) : (
+                  <Button asChild>
+                    <Link to={`/events/${event.id}/register`}>Register Now</Link>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           </div>
